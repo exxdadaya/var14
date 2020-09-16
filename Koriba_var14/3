@@ -1,0 +1,16 @@
+dfLab <- read.csv("FGLab.csv", stringsAsFactors = F,row.names = 1)
+dfLab
+#3.1). 
+dfLab1 <- dfLab[dfLab$Пол == "Жен", c("Имя", "Возраст"), ]
+dfLab1
+#3.2)
+dfLab2 <- dfLab[1, "Имя",drop = FALSE]
+dfLab2 <- dfLab[3, "Имя",drop = FALSE]
+dfLab2
+#3.3)
+sr <- dfLab[dfLab$Пол == "Муж", "Возраст"]
+mean(sr)
+#3.4)
+m <- min(dfLab$Рост)
+vis <- dfLab[dfLab$Пол == "жен" & dfLab$Рост == m, "Имя"]
+vis
